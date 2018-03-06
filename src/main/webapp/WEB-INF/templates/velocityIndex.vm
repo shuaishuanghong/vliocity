@@ -1,0 +1,12 @@
+<html>
+<title>Hello Velocity</title>
+<body>
+Hello ${name}<br>
+    $session.getAttribute("sessionUsername")<br>
+<ul>
+    #foreach( $key in $map.keySet() )
+        <li>Key: $key -> Value: $map.get($key)</li>
+    #end
+</ul>
+</body>
+</html>

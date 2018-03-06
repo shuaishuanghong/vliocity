@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="jp.co.realsys.dao.StudentDao">
+  <select id="getQueryStudentById" parameterType="java.lang.String"
+    resultType="student">
+    <![CDATA[
+      select id from Students where id=#{id}
+    ]]>
+  </select>
+  
+  <select id="getQueryStudent_class_id"
+    resultType="int">
+    <![CDATA[
+      select DISTINCT class_id from Students
+    ]]>
+  </select>
+  
+  <select id="getQueryALlStudent"
+    resultType="student">
+    <![CDATA[
+      select * from Students
+    ]]>
+  </select>
+  
+  <select id="getQueryotherALlStudent" parameterType="String"
+    resultType="student">
+    <![CDATA[
+      select * from Students where class_id !=#{adid}
+    ]]>
+  </select>
+  
+  <select id="getStudentByclass_id" parameterType="int"
+    resultType="student">
+    <![CDATA[
+      select * from Students where class_id=#{id}
+    ]]>
+  </select>
+  
+  
+  <insert id="doRegisterStduent" parameterType="student">
+    <![CDATA[
+      insert into Students values(#{id},#{name},#{birthDate},#{address})
+    ]]>
+  </insert>
+  
+  <update id="changeStduentClassId" parameterType="Map">
+      update Students set 
+      class_id = #{class_id} 
+      where id in
+      <foreach item="item" index="index" collection="ids"
+      open="(" separator="," close=")">
+        #{item}
+  		</foreach> 
+  </update>
+ 
+  
+  <update id="doUpdateStduent" parameterType="student">
+    <![CDATA[
+      update Students set name = #{name},birthdate = #{birthDate},address = #{address} where id=#{id}
+    ]]>
+  </update>
+  <select id="doQueryStduentList" parameterType="java.lang.String"
+    resultType="student">
+    <![CDATA[
+      select * from Students where name=#{name}
+    ]]>
+  </select>
+  <select id="getStudentById" parameterType="java.lang.String"
+    resultType="student">
+    <![CDATA[
+      select * from Students where id=#{id}
+    ]]>
+  </select>
+  <delete id="doDeleteStduent" parameterType="java.lang.String">
+    <![CDATA[
+      delete from Students where id=#{id} 
+    ]]>
+  </delete>
+</mapper>
+
+

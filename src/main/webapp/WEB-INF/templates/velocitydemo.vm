@@ -1,0 +1,25 @@
+#set($greet='hello')
+$greet $name
+#foreach($i in $ownList)
+    $i
+    $velocityCount
+#end
+
+## 声明宏
+#macro(sayHello $name)
+hello $name
+#end
+## 使用宏
+#sayHello("NICK")
+
+#macro( tablerows $color $somelist )
+    #foreach( $something in $somelist )
+    <tr><td bgcolor=$color>$something</td></tr>
+    #end
+#end
+
+#set( $greatlakes = ["Superior","Michigan","Huron","Erie","Ontario"] )
+#set( $color = "blue" )
+<table>
+    #tablerows( $color $greatlakes )
+</table>

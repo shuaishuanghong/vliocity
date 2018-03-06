@@ -1,0 +1,47 @@
+#main{
+    width: 80%;
+    height: 800px;
+    margin: 10px auto;
+}
+#head{
+    height: 100px;
+    background-color: aqua;
+}
+#body{
+    width: 80%;
+    height: 450px;
+    margin: 10px auto;
+}
+#left{
+      margin-left:10% ;
+      width: 30%;
+      float: left;
+      height:450px;
+      background-color: #c0c0c0;
+}
+#center{
+    width: 20%;
+    float: left;
+    height:450px;
+    background-color: antiquewhite;
+}
+#right{
+    width: 30%;
+    float: left;
+    height:450px;
+}
+#bootom{
+    height: 50px;
+}
+.buttondiv{
+    width:100%;
+    height: 200px;  
+}
+#right_btn{
+	margin-left: 40%;
+	margin-top: 70px;
+}
+#left_btn{
+	margin-left: 40%;
+	margin-top: 70px;
+}
