@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>velocity练习</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.css" rel="stylesheet">
+    <style>
+        .container{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<!--
+    任务:
+        1.完成用户的增删改查
+        2.前端采用velocity模版,后端框架自选,数据库自选
+        3.创建用户表,性别用整数或枚举类型表示
+        3.下拉选择框通过#foreach或#macro指令生成
+        4.表格生成用#macro创建模版生成
+        5.修改数据时,需自动填充数据
+        6.将画面中常用css js框架分离成一个公共画面,然后导入此画面
+-->
+<body>
+<div class="container">
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="username">ユーザー： </label>
+            <input type="text" class="form-control" id="username">
+        </div>
+        <div class="form-group">
+            <label for="sex">性别： </label>
+            <select class="form-control">
+                <option value=""></option>
+                <option value="1">男性</option>
+                <option value="2">女性</option>
+            </select>
+        </div>
+        <button  class="btn btn-default">検索</button>
+        <button  class="btn btn-default">新たに</button>
+        <button  class="btn btn-default">削除</button>
+    </form>
+    <hr />
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th></th>
+            <th>ID</th>
+            <th>ユーザー</th>
+            <th>性别</th>
+            <th>年齢</th>
+        </tr>
+        </thead>
+        <tr>
+            <td><input type="radio"></td>
+            <td>1</td>
+            <td>富士太郎</td>
+            <td>男</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td><input type="radio"></td>
+            <td>2</td>
+            <td>川上弘美</td>
+            <td>女</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td><input type="radio"></td>
+            <td>3</td>
+            <td>富士三郎</td>
+            <td>男</td>
+            <td>34</td>
+        </tr>
+    </table>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+</html>

@@ -20,10 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 @SessionAttributes(types = { UserModel.class })
@@ -87,12 +84,15 @@ public class LoginController {
 	public String testVelocity( HttpSession httpSession,Model model){
 		System.out.println("velocity");
 		model.addAttribute("name","小帅");
+		String ss[]={"s","b","c","d","F"};
 		final Map<String,String> map = new HashMap<String,String>();
 		map.put("name1", "test1");
 		map.put("name2", "test2");
 		map.put("name3", "test3");
 		model.addAttribute("map",map);
+		model.addAttribute("dateNow",new Date());
 		model.addAttribute("students",new StudentModel("1","天皇二代","1990.1.1,","四川本地人"));
+		model.addAttribute("list",ss );
 		httpSession.setAttribute("Username","小郭and小勇");
 		return "velocityIndex";
 	}

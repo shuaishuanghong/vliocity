@@ -13,11 +13,15 @@ Hello ${name}<br>
     $students.birthDate<br>
     $students.address<br>
 
+    $students.setName("日本天皇三代")
+
     $students.getId()<br>
     $students.getName()<br>
     $students.getBirthDate()<br>
     $students.getAddress()<br>
-
+    $dateNow<br>
+    $dateTool.format('yyyy-MM-dd HH:mm:ss',$dateNow)
+    ##$date.format('yyyy-MM-dd HH:mm:ss',$dateNow)
 
 
     $!session.getAttribute("Username")<br>
@@ -26,6 +30,15 @@ Hello ${name}<br>
         <li>Key: $key -> Value: $map.get($key)</li>
     #end
 </ul>
+
+#foreach($str in $list)
+    <li>$list[$velocityCount-1]</li><br>
+    <li>$velocityCount</li>
+#end
+
+$list[0]
+$list.get(0)
+$list.get(1)
 
 #[[
 #foreach ($woogie in $boogie)

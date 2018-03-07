@@ -41,8 +41,15 @@
         <property name="exposeSessionAttributes" value="true"/>
         <property name="allowSessionOverride" value="true"/>
         <property name="exposeSpringMacroHelpers" value="true"/>
-        <!-- 用不了velocity-tools，所以这一段就注释掉了 -->
-        <!--         <property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml"/> -->
+        <property name="dateToolAttribute">
+            <value>dateTool</value>
+        </property>
+
+        <property name="numberToolAttribute">
+            <value>numberTool</value>
+        </property>
+         <!--用不了velocity-tools，所以这一段就注释掉了 -->
+       <!-- <property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml"/>-->
     </bean>
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
