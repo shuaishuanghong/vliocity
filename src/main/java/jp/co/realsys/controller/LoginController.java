@@ -83,15 +83,16 @@ public class LoginController {
 	}
 
 	@RequestMapping("/velocity")
-	public ModelAndView testVelocity( HttpSession httpSession){
+	public String testVelocity( HttpSession httpSession,Model model){
 		System.out.println("velocity");
+		model.addAttribute("name","小帅");
 		final Map<String,String> map = new HashMap<String,String>();
-		map.put("name", "sunyx");
 		map.put("name1", "test1");
 		map.put("name2", "test2");
 		map.put("name3", "test3");
-		httpSession.setAttribute("sessionUsername","小郭and小勇");
-		return new ModelAndView("velocityIndex",map);
+		model.addAttribute("map",map);
+		httpSession.setAttribute("Username","小郭and小勇");
+		return "velocityIndex";
 	}
 	@RequestMapping("/velocity2")
 	public String  testVelocity2(Model model,HttpSession httpSession){

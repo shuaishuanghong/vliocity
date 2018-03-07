@@ -40,6 +40,7 @@
         <property name="contentType" value="text/html;charset=utf-8" />
         <property name="exposeSessionAttributes" value="true"/>
         <property name="allowSessionOverride" value="true"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
         <!-- 用不了velocity-tools，所以这一段就注释掉了 -->
         <!--         <property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml"/> -->
     </bean>

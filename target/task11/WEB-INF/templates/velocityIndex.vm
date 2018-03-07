@@ -2,11 +2,27 @@
 <title>Hello Velocity</title>
 <body>
 Hello ${name}<br>
-    $session.getAttribute("sessionUsername")<br>
+
+    #if($name=='sunyx1')true enough
+    #else
+    no way!
+    #end
+    $!session.getAttribute("Username")<br>
 <ul>
     #foreach( $key in $map.keySet() )
         <li>Key: $key -> Value: $map.get($key)</li>
     #end
 </ul>
+
+#[[
+#foreach ($woogie in $boogie)
+nothing will happen to $woogie
+你是不是傻
+#end
+]]#
+<form  id="Secondform" action="second_students" method="post">
+    <input type="text" name="$name" value="${name}">
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>
