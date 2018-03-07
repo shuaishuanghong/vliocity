@@ -7,6 +7,19 @@ Hello ${name}<br>
     #else
     no way!
     #end
+
+    $students.id<br>
+    $students.name<br>
+    $students.birthDate<br>
+    $students.address<br>
+
+    $students.getId()<br>
+    $students.getName()<br>
+    $students.getBirthDate()<br>
+    $students.getAddress()<br>
+
+
+
     $!session.getAttribute("Username")<br>
 <ul>
     #foreach( $key in $map.keySet() )

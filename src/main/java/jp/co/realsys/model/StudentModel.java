@@ -1,16 +1,16 @@
 /*******************************************************************************
- *  ƒVƒXƒeƒ€–¼ : Šw¶î•ñŠÇ—
- *  ’˜ìŒ     : Copyright (C)@2002-2008@Realsys Co. Ltd. @All Rights Reserved.
- *  ‰ïĞ–¼    : ƒŠƒAƒ‹ƒVƒXŠ”®‰ïĞ
+ *  ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½ï¿½ : ï¿½wï¿½ï¿½ï¿½ï¿½ï¿½Ç—ï¿½
+ *  ï¿½ï¿½ï¿½ìŒ     : Copyright (C)ï¿½@2002-2008ï¿½@Realsys Co. Ltd. ï¿½@All Rights Reserved.
+ *  ï¿½ï¿½Ğ–ï¿½    : ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Vï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  *  ****************************************************************************
- *  •ÏX—š—ğ
- *  2008/03/20  ì¬@
+ *  ï¿½ÏXï¿½ï¿½ï¿½ï¿½
+ *  2008/03/20  ï¿½ì¬ï¿½@
  */
 
 package jp.co.realsys.model;
 
 /**
- * Šw¶ModelƒNƒ‰ƒX
+ * ï¿½wï¿½ï¿½Modelï¿½Nï¿½ï¿½ï¿½X
  * 
  * @author Realsys
  */
@@ -18,15 +18,27 @@ public class StudentModel {
 
 	/** ID */
 	private String	id;
-	/** –¼‘O */
+	/** ï¿½ï¿½ï¿½O */
 	private String	name;
-	/** ¶”NŒ“ú */
+	/** ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ */
 	private String	birthDate;
-	/** ZŠ */
+
+    public StudentModel() {
+    }
+
+    public StudentModel(String id, String name, String birthDate, String address) {
+        this.id = id;
+        this.name = name;
+        this.birthDate = birthDate;
+        this.address = address;
+    }
+
+    /** ï¿½Zï¿½ï¿½ */
+
 	private String	address;
 
 	/**
-	 * ID‚ğæ“¾‚·‚éB
+	 * IDï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½B
 	 * 
 	 * @return
 	 */
@@ -43,7 +55,7 @@ public class StudentModel {
     }
 
     /**
-     * ¶”NŒ“ú‚ğæ“¾‚·‚éB
+     * ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½B
      * 
      * @return
      */
@@ -72,7 +84,7 @@ public class StudentModel {
     }
 
     /**
-     * ID‚ğæ“¾‚·‚éB
+     * IDï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½B
      * 
      * @return
      */

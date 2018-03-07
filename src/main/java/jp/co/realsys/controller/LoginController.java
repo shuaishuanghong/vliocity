@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import jp.co.realsys.error.TaskException;
+import jp.co.realsys.model.StudentModel;
 import jp.co.realsys.model.UserModel;
 import jp.co.realsys.service.UsersInfoService;
 
@@ -91,6 +92,7 @@ public class LoginController {
 		map.put("name2", "test2");
 		map.put("name3", "test3");
 		model.addAttribute("map",map);
+		model.addAttribute("students",new StudentModel("1","天皇二代","1990.1.1,","四川本地人"));
 		httpSession.setAttribute("Username","小郭and小勇");
 		return "velocityIndex";
 	}
