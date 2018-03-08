@@ -1,0 +1,26 @@
+## 声明宏
+#macro(drawtr $userlist)
+    #foreach( $user in $userlist )
+    <tr>
+        <td><input type="radio" name="id" value="$user.id"></td>
+        <td>$user.id</td>
+        <td>$user.name</td>
+
+        <td>
+            #if($user.sex==1)
+                男
+            #elseif($user.sex==2)
+                女
+            #end
+            #*
+            WHERE 子句用来筛选 FROM 子句中指定的操作所产生的行。
+
+            GROUP BY 子句用来分组 WHERE 子句的输出。
+
+            HAVING 子句用来从分组的结果中筛选行。
+            *#
+        </td>
+        <td>$user.age</td>
+    </tr>
+    #end
+#end

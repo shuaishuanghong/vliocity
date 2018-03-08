@@ -5,7 +5,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
   <typeAliases>
     <typeAlias alias="user" type="jp.co.realsys.model.UserModel"/>
-    <typeAlias alias="student" type="jp.co.realsys.model.StudentModel"/> 
+    <typeAlias alias="student" type="jp.co.realsys.model.StudentModel"/>
+    <typeAlias alias="velocityUser" type="jp.co.realsys.model.user"/>
   </typeAliases>
 
   <mappers>

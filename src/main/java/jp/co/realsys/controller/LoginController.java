@@ -6,8 +6,10 @@ import javax.validation.Valid;
 import jp.co.realsys.error.TaskException;
 import jp.co.realsys.model.StudentModel;
 import jp.co.realsys.model.UserModel;
+import jp.co.realsys.model.user;
 import jp.co.realsys.service.UsersInfoService;
 
+import jp.co.realsys.service.impl.UserDBServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,8 @@ public class LoginController {
 
 	@Autowired
 	private UsersInfoService userInfoService;
+	@Autowired
+	private UserDBServiceImpl userDBService;
 
 	@ModelAttribute
 	public UserModel setUserModel() {
@@ -107,4 +111,17 @@ public class LoginController {
 		model.addAttribute("ownList",list);
 		return "velocitydemo" ;
 	}
+
+	@RequestMapping("/velocitytest")
+	public String  velocitytest(Model model,HttpSession httpSession){
+		List<user> userList=new ArrayList<>();
+		List<Integer> sexlist=new ArrayList<>();
+		userList=userDBService.getAllUser();
+		sexlist=userDBService.getAllSex();
+		sexlist.add(0,-1);
+		model.addAttribute("userList",userList);
+		model.addAttribute("sexlist",sexlist);
+		return "velocityTest" ;
+	}
+
 }

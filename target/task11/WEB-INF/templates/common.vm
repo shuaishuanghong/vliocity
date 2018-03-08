@@ -1,0 +1,19 @@
+## 声明宏
+#macro(drawtr $userlist)
+    #foreach( $user in $userlist )
+    <tr>
+        <td><input type="radio" name="id" value="$user.id"></td>
+        <td>$user.id</td>
+        <td>$user.name</td>
+
+        <td>
+            #if($user.sex==1)
+                男
+            #elseif($user.sex==2)
+                女
+            #end
+        </td>
+        <td>$user.age</td>
+    </tr>
+    #end
+#end

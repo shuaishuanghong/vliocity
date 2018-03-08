@@ -1,0 +1,29 @@
+<script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+       /* $("#form2").hide();*/
+       $('#query').click(function(e){
+           alert("query");
+           $("#form1").attr("action","newcontroller?act=query");
+           $("#query").submit();
+        });
+    });
+/*function query() {
+    alert("query");
+    $("#form1").attr("action","newcontroller?act=query");
+    $("#query").submit();
+}*/
+
+function deleteuser() {
+    alert("deleteuser");
+    $("#form1").attr("action","newcontroller?act=delete");
+    var id=$("input[type='radio']:checked").val();
+    $("#form1 input[name=id]").val(id);
+    $("#delete").submit();
+}
+function newUser() {
+    alert("newUser");
+    window.location.href="newcontroller/retuanadd";
+    return false;
+}
+</script>
